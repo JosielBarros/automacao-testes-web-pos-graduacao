@@ -1,0 +1,25 @@
+
+{
+  "name": "automacao-web",
+  "version": "1.0.0",
+  "description": "Automação de testes E2E com Cypress para automationexercise.com",
+  "private": true,
+  "scripts": {
+    "cypress:open": "cypress open --browser edge",
+    "cypress:run": "cypress run --browser edge",
+    "test": "cypress run --browser edge",
+    "test:report": "cypress run --browser edge",
+    "lint": "eslint \"cypress/**/*.js\"",
+    "lint:fix": "eslint \"cypress/**/*.js\" --fix",
+    "format": "prettier --write \"cypress/**/*.js\""
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.3.0",
+    "cypress": "^13.17.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-cypress": "^3.6.0",
+    "prettier": "^3.4.2"
+  }
+}

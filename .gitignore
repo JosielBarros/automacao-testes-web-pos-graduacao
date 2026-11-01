@@ -1,0 +1,13 @@
+
+node_modules/
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+cypress/reports/
+mochawesome-report/
+.env
+.env.local
+.env.*.local
+.DS_Store
+Thumbs.db
+*.swp
