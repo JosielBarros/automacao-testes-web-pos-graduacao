@@ -1,20 +1,20 @@
-// import { HomePage } from '../pages/home.page';
-// import { ProductsPage } from '../pages/products.page';
+import { HomePage } from '../pages/home.page';
+import { ProductsPage } from '../pages/products.page';
 
-// describe('TC09 - Verificar busca de produto', () => {
-//   const homePage = new HomePage();
-//   const productsPage = new ProductsPage();
+describe('TC09 - Verificar busca de produto', () => {
+  const homePage = new HomePage();
+  const productsPage = new ProductsPage();
 
-//   it('TC09 - Verificar busca de produto', () => {
-//     homePage.visitarHome();
-//     homePage.validarHomeVisivel();
+  it('TC09 - Verificar busca de produto', () => {
+    homePage.visitarHome();
+    homePage.validarHomeVisivel();
 
-//     homePage.irParaProdutos();
-//     productsPage.tituloTodosProdutos().should('be.visible');
+    homePage.irParaProdutos();
+    productsPage.tituloTodosProdutos().should('be.visible');
 
-//     productsPage.buscarProduto('Dress');
+    productsPage.buscarProduto('Dress');
 
-//     productsPage.tituloProdutosBuscados().should('be.visible');
-//     productsPage.itensProduto().should('have.length.greaterThan', 0);
-//   });
-// });
+    productsPage.tituloProdutosBuscados().should('be.visible');
+    productsPage.itensProduto().should('have.length.greaterThan', 0);
+  });
+});

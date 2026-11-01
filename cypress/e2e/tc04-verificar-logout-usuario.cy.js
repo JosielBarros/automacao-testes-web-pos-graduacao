@@ -1,40 +1,40 @@
-// import { HomePage } from '../pages/home.page';
-// import { SignupLoginPage } from '../pages/signup-login.page';
+import { HomePage } from '../pages/home.page';
+import { SignupLoginPage } from '../pages/signup-login.page';
 
-// describe('TC04 - Verificar logout de usuário', () => {
-//   const homePage = new HomePage();
-//   const signupLoginPage = new SignupLoginPage();
+describe('TC04 - Verificar logout de usuário', () => {
+  const homePage = new HomePage();
+  const signupLoginPage = new SignupLoginPage();
 
-//   let dadosUsuario;
+  let dadosUsuario;
 
-//   before(() => {
-//     cy.criarUsuarioViaApi().then((usuario) => {
-//       dadosUsuario = usuario;
-//     });
-//   });
+  before(() => {
+    cy.criarUsuarioViaApi().then((usuario) => {
+      dadosUsuario = usuario;
+    });
+  });
 
-//   after(() => {
-//     cy.limparUsuario(dadosUsuario);
-//   });
+  after(() => {
+    cy.limparUsuario(dadosUsuario);
+  });
 
-//   it('TC04 - Verificar logout de usuário', () => {
-//     homePage.visitarHome();
-//     homePage.validarHomeVisivel();
+  it('TC04 - Verificar logout de usuário', () => {
+    homePage.visitarHome();
+    homePage.validarHomeVisivel();
 
-//     homePage.irParaCadastroLogin();
-//     signupLoginPage.tituloLogin().should('be.visible');
+    homePage.irParaCadastroLogin();
+    signupLoginPage.tituloLogin().should('be.visible');
 
-//     cy.then(() => {
-//       signupLoginPage.fazerLogin(dadosUsuario.email, dadosUsuario.password);
-//     });
+    cy.then(() => {
+      signupLoginPage.fazerLogin(dadosUsuario.email, dadosUsuario.password);
+    });
 
-//     cy.then(() => {
-//       homePage.validarLogadoComo(dadosUsuario.name);
-//     });
+    cy.then(() => {
+      homePage.validarLogadoComo(dadosUsuario.name);
+    });
 
-//     homePage.sair();
+    homePage.sair();
 
-//     cy.url().should('include', '/login');
-//     signupLoginPage.tituloLogin().should('be.visible');
-//   });
-// });
+    cy.url().should('include', '/login');
+    signupLoginPage.tituloLogin().should('be.visible');
+  });
+});
